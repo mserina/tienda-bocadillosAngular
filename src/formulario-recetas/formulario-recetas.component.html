@@ -1,0 +1,35 @@
+<form (ngSubmit)="addCliente()">
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Nombre Receta</label>
+      <input 
+        type="email"
+        [(ngModel)]="recetaACrear.nombreDeLaReceta"
+        class="form-control" 
+        id="nombreReceta"
+        name="nombreDeLaReceta"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Ingrediente de la Receta</label>
+      <input 
+        type="text"
+        [(ngModel)]="recetaACrear.ingredientesDeLaReceta"
+        class="form-control" 
+        id="ingredientes"
+        name="ingredientesReceta"
+      >
+    </div>
+
+    <div class="mb-3">
+      <label for="exampleInputPassword1" class="form-label">Pasos</label>
+      <textarea 
+        [(ngModel)]="recetaACrear.pasosDelaReceta"
+        class="form-control"
+        aria-label="With textarea"
+        name="pasosReceta"
+      ></textarea>
+    </div>
+
+    <button type="enviar" class="btn btn-primary">Enviar</button>
+  </form>
